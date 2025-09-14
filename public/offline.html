@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Nabha Health Connect</title>
+    <style>
+        body {
+            font-family: 'Noto Sans', system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0B6E6E, #4A9B9B);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 400px;
+        }
+        .icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        .features {
+            margin-top: 2rem;
+            text-align: left;
+        }
+        .features h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .features li {
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .features li::before {
+            content: "✓ ";
+            color: #E07A2C;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            📱
+        </div>
+        
+        <h1>You're Currently Offline</h1>
+        
+        <p>
+            Don't worry! Nabha Health Connect works offline. 
+            You can still record vitals, create consultation requests, 
+            and access your health records.
+        </p>
+        
+        <a href="/" class="btn">
+            Continue to App
+        </a>
+        
+        <div class="features">
+            <h3>Available Offline:</h3>
+            <ul>
+                <li>Record vital signs and symptoms</li>
+                <li>Create consultation requests</li>
+                <li>View your health records</li>
+                <li>Access emergency contacts</li>
+                <li>Use symptom checker</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Check for connection and redirect when online
+        function checkConnection() {
+            if (navigator.onLine) {
+                window.location.href = '/';
+            }
+        }
+        
+        // Check every 5 seconds
+        setInterval(checkConnection, 5000);
+        
+        // Listen for online events
+        window.addEventListener('online', checkConnection);
+    </script>
+</body>
+</html>

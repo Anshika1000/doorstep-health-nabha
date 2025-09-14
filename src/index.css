@@ -1,96 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Gurmukhi:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Nabha Health Connect Design System - Optimized for Rural Healthcare */
 
 @layer base {
   :root {
+    /* Core brand colors - deep teal primary with warm saffron accent */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 210 11% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 11% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 11% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Deep teal primary - medical trust & reliability */
+    --primary: 180 100% 21%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 180 60% 45%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm saffron secondary - friendly & approachable */
+    --secondary: 22 79% 52%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 22 79% 85%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Neutral grays - high contrast for accessibility */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 180 60% 95%;
+    --accent-foreground: 180 100% 21%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Status colors for triage */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 210 11% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --emergency: 0 100% 45%;
+    --emergency-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* UI elements */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 180 100% 21%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Gradients for visual appeal */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-warm: linear-gradient(135deg, hsl(var(--secondary)), hsl(22 79% 65%));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Shadows for depth */
+    --shadow-soft: 0 2px 8px -2px hsl(var(--primary) / 0.1);
+    --shadow-medium: 0 4px 16px -4px hsl(var(--primary) / 0.15);
+    --shadow-strong: 0 8px 32px -8px hsl(var(--primary) / 0.2);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Touch targets - minimum 44px for accessibility */
+    --touch-target: 3rem;
+    --touch-target-large: 3.5rem;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Typography scale */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    /* Spacing scale optimized for mobile */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Animation timing */
+    --transition-fast: 150ms ease-out;
+    --transition-normal: 300ms ease-out;
+    --transition-slow: 500ms ease-out;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 210 11% 4%;
+    --foreground: 0 0% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 11% 7%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 11% 7%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 180 60% 45%;
+    --primary-foreground: 210 11% 4%;
+    --primary-glow: 180 60% 65%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 22 79% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 22 79% 25%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 11% 15%;
+    --muted-foreground: 215 16% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 180 60% 15%;
+    --accent-foreground: 180 60% 45%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --border: 210 11% 15%;
+    --input: 210 11% 15%;
+    --ring: 180 60% 45%;
+  }
+}
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Noto Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Punjabi text support */
+  .font-gurmukhi {
+    font-family: 'Noto Sans Gurmukhi', 'Noto Sans', sans-serif;
+  }
+
+  /* Accessibility improvements */
+  .focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    :root {
+      --border: 0 0% 0%;
+      --ring: 0 0% 0%;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Touch-friendly button base */
+  .btn-touch {
+    @apply min-h-[var(--touch-target)] min-w-[var(--touch-target)] px-6 py-3 rounded-lg font-medium transition-all duration-[var(--transition-normal)] active:scale-95;
+  }
+
+  /* Large touch target for primary actions */
+  .btn-touch-large {
+    @apply min-h-[var(--touch-target-large)] min-w-[var(--touch-target-large)] px-8 py-4 text-lg;
+  }
+
+  /* Offline indicator */
+  .offline-banner {
+    @apply bg-warning text-warning-foreground px-4 py-2 text-center font-medium;
+  }
+
+  /* Sync status indicator */
+  .sync-indicator {
+    @apply flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .sync-indicator.synced {
+    @apply bg-success/10 text-success border border-success/20;
+  }
+
+  .sync-indicator.pending {
+    @apply bg-warning/10 text-warning border border-warning/20;
+  }
+
+  .sync-indicator.offline {
+    @apply bg-muted text-muted-foreground border border-border;
+  }
+
+  /* Triage badges */
+  .triage-badge {
+    @apply px-3 py-1 rounded-full text-sm font-semibold border;
+  }
+
+  .triage-badge.home-care {
+    @apply bg-success/10 text-success border-success/30;
+  }
+
+  .triage-badge.chw-visit {
+    @apply bg-warning/10 text-warning border-warning/30;
+  }
+
+  .triage-badge.doctor-consult {
+    @apply bg-primary/10 text-primary border-primary/30;
+  }
+
+  .triage-badge.emergency {
+    @apply bg-emergency/10 text-emergency border-emergency/30;
+  }
+
+  /* Form elements optimized for rural use */
+  .form-field {
+    @apply space-y-2;
+  }
+
+  .form-label {
+    @apply text-sm font-medium text-foreground;
+  }
+
+  .form-input {
+    @apply w-full min-h-[var(--touch-target)] px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all;
+  }
+
+  .form-error {
+    @apply text-sm text-destructive font-medium;
+  }
+
+  /* Card layouts */
+  .card-elevated {
+    @apply bg-card border border-border rounded-xl shadow-[var(--shadow-medium)] p-6;
+  }
+
+  .card-subtle {
+    @apply bg-card border border-border rounded-lg shadow-[var(--shadow-soft)] p-4;
+  }
+
+  /* Loading states */
+  .loading-pulse {
+    @apply animate-pulse bg-muted rounded;
+  }
+
+  /* Voice guidance indicator */
+  .voice-active {
+    @apply relative;
+  }
+
+  .voice-active::after {
+    content: '';
+    @apply absolute -inset-1 bg-primary/20 rounded-lg animate-ping;
   }
 }
 
