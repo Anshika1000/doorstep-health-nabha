@@ -17,19 +17,17 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <I18nProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<MainLayout><PatientHome /></MainLayout>} />
-              <Route path="/consult" element={<MainLayout><ConsultPage /></MainLayout>} />
-              <Route path="/vitals" element={<MainLayout><VitalsPage /></MainLayout>} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
-        </TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<MainLayout><PatientHome /></MainLayout>} />
+            <Route path="/consult" element={<MainLayout><ConsultPage /></MainLayout>} />
+            <Route path="/vitals" element={<MainLayout><VitalsPage /></MainLayout>} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
       </I18nProvider>
     </QueryClientProvider>
   );
