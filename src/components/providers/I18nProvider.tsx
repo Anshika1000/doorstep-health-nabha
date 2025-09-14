@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useState, useEffect, ReactNode } from 'react';
 import { Language, getTranslations, LocalizedStrings, I18nContext } from '@/lib/i18n';
 
 interface I18nProviderProps {
