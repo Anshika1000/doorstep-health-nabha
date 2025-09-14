@@ -1,8 +1,9 @@
 import React from 'react';
-import { MessageSquare, Activity, Calendar, Users, MapPin, Clock } from 'lucide-react';
+import { MessageSquare, Activity, Calendar, Users, MapPin, Clock, FileText, Heart, Thermometer } from 'lucide-react';
 import { Button } from '@/components/ui/enhanced-button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { VideoConsultation } from '@/components/patient/VideoConsultation';
 import { useI18n } from '@/lib/i18n';
 
 export function PatientHome() {
@@ -29,7 +30,7 @@ export function PatientHome() {
     {
       type: 'consult',
       title: 'Video consultation completed',
-      subtitle: 'Dr. Preet Singh - General Medicine',
+      subtitle: 'Dr. Priya Sharma - General Medicine',
       time: '2 hours ago',
       status: 'completed',
     },
@@ -46,6 +47,34 @@ export function PatientHome() {
       subtitle: 'Paracetamol 500mg - Available at local pharmacy',
       time: '2 days ago',
       status: 'available',
+    },
+    {
+      type: 'vitals',
+      title: 'Blood glucose measured',
+      subtitle: '95 mg/dL - Normal fasting level',
+      time: '3 days ago',
+      status: 'normal',
+    },
+    {
+      type: 'consult',
+      title: 'Follow-up appointment scheduled',
+      subtitle: 'Dr. Rajesh Kumar - Pediatrics',
+      time: '4 days ago',
+      status: 'scheduled',
+    },
+    {
+      type: 'prescription',
+      title: 'Lab test results available',
+      subtitle: 'Complete Blood Count - All values normal',
+      time: '5 days ago',
+      status: 'available',
+    },
+    {
+      type: 'vitals',
+      title: 'Temperature recorded',
+      subtitle: '98.6°F - Normal body temperature',
+      time: '1 week ago',
+      status: 'normal',
     },
   ];
 
@@ -169,6 +198,9 @@ export function PatientHome() {
         </div>
       </Card>
 
+      {/* Video Consultation Section */}
+      <VideoConsultation />
+
       {/* Recent Activity */}
       <Card className="card-elevated">
         <div className="space-y-4">
@@ -181,12 +213,12 @@ export function PatientHome() {
             </Button>
           </div>
           <div className="space-y-3">
-            {recentActivity.map((activity, index) => (
+            {recentActivity.slice(0, 5).map((activity, index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
                   {activity.type === 'consult' && <MessageSquare className="h-4 w-4 text-primary" />}
                   {activity.type === 'vitals' && <Activity className="h-4 w-4 text-secondary" />}
-                  {activity.type === 'prescription' && <Calendar className="h-4 w-4 text-success" />}
+                  {activity.type === 'prescription' && <FileText className="h-4 w-4 text-success" />}
                 </div>
                 <div className="flex-1 space-y-1">
                   <p className="text-sm font-medium text-foreground">
@@ -203,6 +235,7 @@ export function PatientHome() {
                   className={
                     activity.status === 'completed' ? 'triage-badge home-care' :
                     activity.status === 'normal' ? 'triage-badge chw-visit' :
+                    activity.status === 'scheduled' ? 'triage-badge doctor-consult' :
                     'triage-badge doctor-consult'
                   }
                 >
