@@ -59,19 +59,41 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, loading, badge, children, disabled, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     
-    return (
-      <div className="relative inline-flex">
-        <Comp
-          className={cn(buttonVariants({ variant, size, className }))}
-          ref={ref}
-          disabled={disabled || loading}
-          {...props}
-        >
+    // When using asChild, we need to be careful about multiple children
+    const content = asChild ? (
+      // For asChild, clone the single child and add loading state
+      React.cloneElement(
+        children as React.ReactElement,
+        {
+          className: cn(buttonVariants({ variant, size, className })),
+          ref,
+          disabled: disabled || loading,
+          ...props,
+        },
+        <>
           {loading && (
             <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
           )}
-          {children}
-        </Comp>
+          {(children as React.ReactElement).props.children}
+        </>
+      )
+    ) : (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        disabled={disabled || loading}
+        {...props}
+      >
+        {loading && (
+          <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
+        )}
+        {children}
+      </Comp>
+    );
+    
+    return (
+      <div className="relative inline-flex">
+        {content}
         
         {badge && (
           <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-emergency text-xs font-bold text-emergency-foreground">
