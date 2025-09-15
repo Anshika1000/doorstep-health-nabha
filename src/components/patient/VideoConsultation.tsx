@@ -9,6 +9,10 @@ import drPriyaSharma from '@/assets/dr-priya-sharma.jpg';
 import drRajeshKumar from '@/assets/dr-rajesh-kumar.jpg';
 import drAnjaliPatel from '@/assets/dr-anjali-patel.jpg';
 import drHarpreetSingh from '@/assets/dr-harpreet-singh.jpg';
+import drFatimaSheikh from '@/assets/dr-fatima-sheikh.jpg';
+import drSureshReddy from '@/assets/dr-suresh-reddy.jpg';
+import drMeeraChatterjee from '@/assets/dr-meera-chatterjee.jpg';
+import drArjunNair from '@/assets/dr-arjun-nair.jpg';
 
 interface Doctor {
   id: string;
@@ -79,6 +83,58 @@ export function VideoConsultation() {
       languages: ['English', 'Hindi', 'Punjabi', 'Urdu', 'Sindhi'],
       status: 'online',
       avatar: drHarpreetSingh
+    },
+    {
+      id: '5',
+      name: 'Dr. Fatima Sheikh',
+      specialty: 'Gynecology',
+      experience: 14,
+      rating: 4.9,
+      reviews: 178,
+      location: 'Remote Consultation',
+      nextAvailable: '1:45 PM Today',
+      languages: ['English', 'Hindi', 'Urdu', 'Punjabi'],
+      status: 'online',
+      avatar: drFatimaSheikh
+    },
+    {
+      id: '6',
+      name: 'Dr. Suresh Reddy',
+      specialty: 'Orthopedics',
+      experience: 16,
+      rating: 4.8,
+      reviews: 145,
+      location: 'Nabha Civil Hospital',
+      nextAvailable: '6:00 PM Today',
+      languages: ['English', 'Hindi', 'Telugu', 'Tamil'],
+      status: 'online',
+      avatar: drSureshReddy
+    },
+    {
+      id: '7',
+      name: 'Dr. Meera Chatterjee',
+      specialty: 'Dermatology',
+      experience: 11,
+      rating: 4.7,
+      reviews: 98,
+      location: 'Remote Consultation',
+      nextAvailable: '3:30 PM Today',
+      languages: ['English', 'Hindi', 'Bengali', 'Urdu'],
+      status: 'online',
+      avatar: drMeeraChatterjee
+    },
+    {
+      id: '8',
+      name: 'Dr. Arjun Nair',
+      specialty: 'Neurology',
+      experience: 13,
+      rating: 4.9,
+      reviews: 167,
+      location: 'Nabha Civil Hospital',
+      nextAvailable: '7:15 PM Today',
+      languages: ['English', 'Hindi', 'Tamil', 'Telugu', 'Malayalam'],
+      status: 'busy',
+      avatar: drArjunNair
     }
   ];
 
@@ -120,7 +176,7 @@ export function VideoConsultation() {
         </div>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {doctors.map((doctor) => (
           <Card key={doctor.id} className="card-elevated">
             <div className="space-y-4">
