@@ -37,7 +37,7 @@ export function VideoConsultation() {
       reviews: 156,
       location: 'Nabha Civil Hospital',
       nextAvailable: '2:30 PM Today',
-      languages: ['English', 'Hindi', 'Punjabi'],
+      languages: ['English', 'Hindi', 'Punjabi', 'Gujarati', 'Urdu'],
       status: 'online',
       avatar: drPriyaSharma
     },
@@ -50,7 +50,7 @@ export function VideoConsultation() {
       reviews: 203,
       location: 'Remote Consultation',
       nextAvailable: '3:15 PM Today',
-      languages: ['Hindi', 'Punjabi'],
+      languages: ['Hindi', 'Punjabi', 'Bengali', 'Marathi'],
       status: 'online',
       avatar: drRajeshKumar
     },
@@ -63,7 +63,7 @@ export function VideoConsultation() {
       reviews: 89,
       location: 'Nabha Civil Hospital',
       nextAvailable: '4:00 PM Today',
-      languages: ['English', 'Hindi'],
+      languages: ['English', 'Hindi', 'Gujarati', 'Tamil', 'Telugu'],
       status: 'busy',
       avatar: drAnjaliPatel
     },
@@ -76,7 +76,7 @@ export function VideoConsultation() {
       reviews: 124,
       location: 'Nabha Civil Hospital',
       nextAvailable: '5:30 PM Today',
-      languages: ['English', 'Hindi', 'Punjabi'],
+      languages: ['English', 'Hindi', 'Punjabi', 'Urdu', 'Sindhi'],
       status: 'online',
       avatar: drHarpreetSingh
     }
