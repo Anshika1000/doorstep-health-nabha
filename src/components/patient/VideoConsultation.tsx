@@ -5,6 +5,10 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { useI18n } from '@/lib/i18n';
+import drPriyaSharma from '@/assets/dr-priya-sharma.jpg';
+import drRajeshKumar from '@/assets/dr-rajesh-kumar.jpg';
+import drAnjaliPatel from '@/assets/dr-anjali-patel.jpg';
+import drHarpreetSingh from '@/assets/dr-harpreet-singh.jpg';
 
 interface Doctor {
   id: string;
@@ -35,7 +39,7 @@ export function VideoConsultation() {
       nextAvailable: '2:30 PM Today',
       languages: ['English', 'Hindi', 'Punjabi'],
       status: 'online',
-      avatar: '/placeholder.svg'
+      avatar: drPriyaSharma
     },
     {
       id: '2', 
@@ -48,7 +52,7 @@ export function VideoConsultation() {
       nextAvailable: '3:15 PM Today',
       languages: ['Hindi', 'Punjabi'],
       status: 'online',
-      avatar: '/placeholder.svg'
+      avatar: drRajeshKumar
     },
     {
       id: '3',
@@ -61,7 +65,7 @@ export function VideoConsultation() {
       nextAvailable: '4:00 PM Today',
       languages: ['English', 'Hindi'],
       status: 'busy',
-      avatar: '/placeholder.svg'
+      avatar: drAnjaliPatel
     },
     {
       id: '4',
@@ -74,7 +78,7 @@ export function VideoConsultation() {
       nextAvailable: '5:30 PM Today',
       languages: ['English', 'Hindi', 'Punjabi'],
       status: 'online',
-      avatar: '/placeholder.svg'
+      avatar: drHarpreetSingh
     }
   ];
 
