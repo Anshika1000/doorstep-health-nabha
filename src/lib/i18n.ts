@@ -62,6 +62,37 @@ export interface LocalizedStrings {
   workingSaved: string;
   willSyncWhenOnline: string;
   offlineMode: string;
+  
+  // Health Notice Board
+  healthNoticeBoard: {
+    title: string;
+    subtitle: string;
+    seeMore: string;
+    symptoms: string;
+    precautions: string;
+    diseases: {
+      viralFever: {
+        name: string;
+        symptoms: string[];
+        precautions: string[];
+      };
+      dengue: {
+        name: string;
+        symptoms: string[];
+        precautions: string[];
+      };
+      seasonalFlu: {
+        name: string;
+        symptoms: string[];
+        precautions: string[];
+      };
+      gastroenteritis: {
+        name: string;
+        symptoms: string[];
+        precautions: string[];
+      };
+    };
+  };
 }
 
 const translations: Record<Language, LocalizedStrings> = {
@@ -117,6 +148,36 @@ const translations: Record<Language, LocalizedStrings> = {
     workingSaved: 'Your work has been saved',
     willSyncWhenOnline: 'It will sync when you are back online',
     offlineMode: 'Offline — your work will sync when connected',
+    
+    healthNoticeBoard: {
+      title: 'Health Notice Board',
+      subtitle: 'Current Health Alerts & Prevention Tips',
+      seeMore: 'See More',
+      symptoms: 'Symptoms',
+      precautions: 'Precautions',
+      diseases: {
+        viralFever: {
+          name: 'Viral Fever',
+          symptoms: ['High fever (101°F+)', 'Body aches and headache', 'Weakness and fatigue'],
+          precautions: ['Drink plenty of fluids', 'Take adequate rest', 'Consult doctor if fever persists'],
+        },
+        dengue: {
+          name: 'Dengue Fever',
+          symptoms: ['Sudden high fever', 'Severe headache', 'Pain behind eyes'],
+          precautions: ['Remove stagnant water', 'Use mosquito nets', 'Seek immediate medical help'],
+        },
+        seasonalFlu: {
+          name: 'Seasonal Flu',
+          symptoms: ['Cough and cold', 'Runny or stuffy nose', 'Mild fever'],
+          precautions: ['Wash hands frequently', 'Avoid crowded places', 'Cover mouth when coughing'],
+        },
+        gastroenteritis: {
+          name: 'Gastroenteritis',
+          symptoms: ['Stomach pain', 'Nausea and vomiting', 'Diarrhea'],
+          precautions: ['Drink clean water', 'Eat freshly cooked food', 'Maintain proper hygiene'],
+        },
+      },
+    },
   },
   hi: {
     appName: 'नाभा हेल्थ कनेक्ट',
@@ -170,6 +231,36 @@ const translations: Record<Language, LocalizedStrings> = {
     workingSaved: 'आपका काम सेव हो गया है',
     willSyncWhenOnline: 'जब आप वापस ऑनलाइन होंगे तो यह सिंक हो जाएगा',
     offlineMode: 'ऑफलाइन — कनेक्ट होने पर आपका काम सिंक हो जाएगा',
+    
+    healthNoticeBoard: {
+      title: 'स्वास्थ्य सूचना बोर्ड',
+      subtitle: 'वर्तमान स्वास्थ्य चेतावनी और रोकथाम की जानकारी',
+      seeMore: 'और देखें',
+      symptoms: 'लक्षण',
+      precautions: 'सावधानियां',
+      diseases: {
+        viralFever: {
+          name: 'वायरल बुखार',
+          symptoms: ['तेज बुखार (101°F+)', 'शरीर में दर्द और सिरदर्द', 'कमजोरी और थकान'],
+          precautions: ['भरपूर तरल पदार्थ पिएं', 'पर्याप्त आराम करें', 'बुखार जारी रहने पर डॉक्टर से सलाह लें'],
+        },
+        dengue: {
+          name: 'डेंगू बुखार',
+          symptoms: ['अचानक तेज बुखार', 'गंभीर सिरदर्द', 'आंखों के पीछे दर्द'],
+          precautions: ['रुका हुआ पानी हटाएं', 'मच्छरदानी का उपयोग करें', 'तुरंत चिकित्सा सहायता लें'],
+        },
+        seasonalFlu: {
+          name: 'मौसमी फ्लू',
+          symptoms: ['खांसी और जुकाम', 'नाक बहना या बंद होना', 'हल्का बुखार'],
+          precautions: ['बार-बार हाथ धोएं', 'भीड़भाड़ वाली जगहों से बचें', 'खांसते समय मुंह ढकें'],
+        },
+        gastroenteritis: {
+          name: 'गैस्ट्रोएंटेराइटिस',
+          symptoms: ['पेट में दर्द', 'जी मिचलाना और उल्टी', 'दस्त'],
+          precautions: ['साफ पानी पिएं', 'ताजा पका हुआ खाना खाएं', 'उचित स्वच्छता बनाए रखें'],
+        },
+      },
+    },
   },
   pa: {
     appName: 'ਨਾਭਾ ਹੈਲਥ ਕਨੈਕਟ',
@@ -223,6 +314,36 @@ const translations: Record<Language, LocalizedStrings> = {
     workingSaved: 'ਤੁਹਾਡਾ ਕੰਮ ਸੇਵ ਹੋ ਗਿਆ ਹੈ',
     willSyncWhenOnline: 'ਜਦੋਂ ਤੁਸੀਂ ਵਾਪਸ ਔਨਲਾਈਨ ਹੋਵੋਗੇ ਤਾਂ ਇਹ ਸਿੰਕ ਹੋ ਜਾਵੇਗਾ',
     offlineMode: 'ਔਫਲਾਈਨ — ਕਨੈਕਟ ਹੋਣ ਤੇ ਤੁਹਾਡਾ ਕੰਮ ਸਿੰਕ ਹੋ ਜਾਵੇਗਾ',
+    
+    healthNoticeBoard: {
+      title: 'ਸਿਹਤ ਸੂਚਨਾ ਬੋਰਡ',
+      subtitle: 'ਮੌਜੂਦਾ ਸਿਹਤ ਚੇਤਾਵਨੀਆਂ ਅਤੇ ਰੋਕਥਾਮ ਦੀ ਜਾਣਕਾਰੀ',
+      seeMore: 'ਹੋਰ ਵੇਖੋ',
+      symptoms: 'ਲੱਛਣ',
+      precautions: 'ਸਾਵਧਾਨੀਆਂ',
+      diseases: {
+        viralFever: {
+          name: 'ਵਾਇਰਲ ਬੁਖਾਰ',
+          symptoms: ['ਤੇਜ਼ ਬੁਖਾਰ (101°F+)', 'ਸਰੀਰ ਵਿੱਚ ਦਰਦ ਅਤੇ ਸਿਰ ਦਰਦ', 'ਕਮਜ਼ੋਰੀ ਅਤੇ ਥਕਾਵਟ'],
+          precautions: ['ਬਹੁਤ ਸਾਰਾ ਪਾਣੀ ਪੀਓ', 'ਚੰਗੀ ਆਰਾਮ ਕਰੋ', 'ਬੁਖਾਰ ਜਾਰੀ ਰਹਿਣ ਤੇ ਡਾਕਟਰ ਨਾਲ ਸਲਾਹ ਕਰੋ'],
+        },
+        dengue: {
+          name: 'ਡੇਂਗੂ ਬੁਖਾਰ',
+          symptoms: ['ਅਚਾਨਕ ਤੇਜ਼ ਬੁਖਾਰ', 'ਗੰਭੀਰ ਸਿਰ ਦਰਦ', 'ਅੱਖਾਂ ਦੇ ਪਿੱਛੇ ਦਰਦ'],
+          precautions: ['ਰੁਕਿਆ ਹੋਇਆ ਪਾਣੀ ਹਟਾਓ', 'ਮੱਛਰਦਾਨੀ ਦੀ ਵਰਤੋਂ ਕਰੋ', 'ਤੁਰੰਤ ਡਾਕਟਰੀ ਸਹਾਇਤਾ ਲਓ'],
+        },
+        seasonalFlu: {
+          name: 'ਮੌਸਮੀ ਫਲੂ',
+          symptoms: ['ਖੰਘ ਅਤੇ ਜ਼ੁਕਾਮ', 'ਨੱਕ ਵਗਣਾ ਜਾਂ ਬੰਦ ਹੋਣਾ', 'ਹਲਕਾ ਬੁਖਾਰ'],
+          precautions: ['ਵਾਰ-ਵਾਰ ਹੱਥ ਧੋਵੋ', 'ਭੀੜ ਵਾਲੀਆਂ ਥਾਵਾਂ ਤੋਂ ਬਚੋ', 'ਖੰਘਦੇ ਸਮੇਂ ਮੂੰਹ ਢੱਕੋ'],
+        },
+        gastroenteritis: {
+          name: 'ਗੈਸਟਰੋਐਂਟੇਰਾਇਟਿਸ',
+          symptoms: ['ਪੇਟ ਵਿੱਚ ਦਰਦ', 'ਜੀ ਮਿਚਲਾਉਣਾ ਅਤੇ ਉਲਟੀ', 'ਦਸਤ'],
+          precautions: ['ਸਾਫ਼ ਪਾਣੀ ਪੀਓ', 'ਤਾਜ਼ਾ ਪਕਿਆ ਖਾਣਾ ਖਾਓ', 'ਸਫ਼ਾਈ ਬਣਾਈ ਰੱਖੋ'],
+        },
+      },
+    },
   },
   bn: {
     appName: 'নভা হেলথ কানেক্ট',
@@ -276,6 +397,36 @@ const translations: Record<Language, LocalizedStrings> = {
     workingSaved: 'আপনার কাজ সংরক্ষণ করা হয়েছে',
     willSyncWhenOnline: 'আপনি আবার অনলাইন হলে এটি সিঙ্ক হবে',
     offlineMode: 'অফলাইন — সংযোগ হলে আপনার কাজ সিঙ্ক হবে',
+    
+    healthNoticeBoard: {
+      title: 'স্বাস্থ্য নোটিশ বোর্ড',
+      subtitle: 'বর্তমান স্বাস্থ্য সতর্কতা ও প্রতিরোধের তথ্য',
+      seeMore: 'আরো দেখুন',
+      symptoms: 'লক্ষণ',
+      precautions: 'সতর্কতা',
+      diseases: {
+        viralFever: {
+          name: 'ভাইরাল জ্বর',
+          symptoms: ['উচ্চ জ্বর (১০১°F+)', 'শরীরে ব্যথা ও মাথাব্যথা', 'দুর্বলতা ও ক্লান্তি'],
+          precautions: ['প্রচুর তরল পান করুন', 'পর্যাপ্ত বিশ্রাম নিন', 'জ্বর অব্যাহত থাকলে ডাক্তারের পরামর্শ নিন'],
+        },
+        dengue: {
+          name: 'ডেঙ্গু জ্বর',
+          symptoms: ['হঠাৎ উচ্চ জ্বর', 'প্রচণ্ড মাথাব্যথা', 'চোখের পিছনে ব্যথা'],
+          precautions: ['আটকে থাকা পানি সরান', 'মশারি ব্যবহার করুন', 'তাৎক্ষণিক চিকিৎসা নিন'],
+        },
+        seasonalFlu: {
+          name: 'মৌসুমী ফ্লু',
+          symptoms: ['কাশি ও সর্দি', 'নাক দিয়ে পানি পড়া বা বন্ধ হওয়া', 'হালকা জ্বর'],
+          precautions: ['ঘন ঘন হাত ধুয়ে নিন', 'ভিড়ের জায়গা এড়িয়ে চলুন', 'কাশির সময় মুখ ঢেকে রাখুন'],
+        },
+        gastroenteritis: {
+          name: 'গ্যাস্ট্রোএন্টেরাইটিস',
+          symptoms: ['পেটে ব্যথা', 'বমি বমি ভাব ও বমি', 'ডায়রিয়া'],
+          precautions: ['পরিষ্কার পানি পান করুন', 'তাজা রান্না করা খাবার খান', 'যথাযথ স্বাস্থ্যবিধি মেনে চলুন'],
+        },
+      },
+    },
   },
   ta: {
     appName: 'நபா ஹெல்த் கனெக்ட்',
@@ -329,6 +480,36 @@ const translations: Record<Language, LocalizedStrings> = {
     workingSaved: 'உங்கள் வேலை சேமிக்கப்பட்டது',
     willSyncWhenOnline: 'நீங்கள் மீண்டும் ஆன்லைனில் வரும்போது இது ஒத்திசைக்கப்படும்',
     offlineMode: 'ஆஃப்லைன் — இணைக்கப்பட்டதும் உங்கள் வேலை ஒத்திசைக்கப்படும்',
+    
+    healthNoticeBoard: {
+      title: 'சுகாதார அறிவிப்பு பலகை',
+      subtitle: 'தற்போதைய சுகாதார எச்சரிக்கைகள் & தடுப்பு குறிப்புகள்',
+      seeMore: 'மேலும் பார்க்க',
+      symptoms: 'அறிகுறிகள்',
+      precautions: 'முன்னெச்சரிக்கைகள்',
+      diseases: {
+        viralFever: {
+          name: 'வைரல் காய்ச்சல்',
+          symptoms: ['அதிக காய்ச்சல் (101°F+)', 'உடல் வலி மற்றும் தலைவலி', 'பலவீனம் மற்றும் சோர்வு'],
+          precautions: ['நிறைய திரவங்கள் குடிக்கவும்', 'போதுமான ஓய்வு எடுத்துக் கொள்ளவும்', 'காய்ச்சல் தொடர்ந்தால் மருத்துவரை அணுகவும்'],
+        },
+        dengue: {
+          name: 'டெங்கு காய்ச்சல்',
+          symptoms: ['திடீர் அதிக காய்ச்சல்', 'கடுமையான தலைவலி', 'கண்களுக்குப் பின்னால் வலி'],
+          precautions: ['தேங்கிய நீரை அகற்றவும்', 'கொசு வலைகளைப் பயன்படுத்தவும்', 'உடனடி மருத்துவ உதவி பெறவும்'],
+        },
+        seasonalFlu: {
+          name: 'பருவகால காய்ச்சல்',
+          symptoms: ['இருமல் மற்றும் சளி', 'மூக்கு ஒழுகுதல் அல்லது அடைப்பு', 'லேசான காய்ச்சல்'],
+          precautions: ['அடிக்கடி கைகளைக் கழுவவும்', 'கூட்டமான இடங்களைத் தவிர்க்கவும்', 'இருமும்போது வாயை மூடவும்'],
+        },
+        gastroenteritis: {
+          name: 'வயிற்றுப்போக்கு',
+          symptoms: ['வயிற்று வலி', 'குமட்டல் மற்றும் வாந்தி', 'வயிற்றுப்போக்கு'],
+          precautions: ['சுத்தமான நீர் குடிக்கவும்', 'புதிதாக சமைத்த உணவை உண்ணவும்', 'சரியான சுகாதாரத்தைப் பேணவும்'],
+        },
+      },
+    },
   },
   te: {
     appName: 'నభా హెల్త్ కనెక్ట్',
@@ -382,6 +563,36 @@ const translations: Record<Language, LocalizedStrings> = {
     workingSaved: 'మీ పని సేవ్ అయ్యింది',
     willSyncWhenOnline: 'మీరు మళ్లీ ఆన్‌లైన్‌కు వచ్చినప్పుడు ఇది సింక్ అవుతుంది',
     offlineMode: 'ఆఫ్‌లైన్ — కనెక్ట్ అయినప్పుడు మీ పని సింక్ అవుతుంది',
+    
+    healthNoticeBoard: {
+      title: 'ఆరోగ్య నోటీసు బోర్డు',
+      subtitle: 'ప్రస్తుత ఆరోగ్య హెచ్చరికలు & నివారణ చిట్కాలు',
+      seeMore: 'మరింత చూడండి',
+      symptoms: 'లక్షణాలు',
+      precautions: 'జాగ్రత్తలు',
+      diseases: {
+        viralFever: {
+          name: 'వైరల్ జ్వరం',
+          symptoms: ['అధిక జ్వరం (101°F+)', 'శరీర నొప్పులు మరియు తలనొప్పి', 'బలహీనత మరియు అలసట'],
+          precautions: ['చాలా ద్రవాలు త్రాగండి', 'తగినంత విశ్రాంతి తీసుకోండి', 'జ్వరం కొనసాగితే వైద్యుడిని సంప్రదించండి'],
+        },
+        dengue: {
+          name: 'డెంగ్యూ జ్వరం',
+          symptoms: ['అకస్మాత్తుగా అధిక జ్వరం', 'తీవ్రమైన తలనొప్పి', 'కళ్ళ వెనుక నొప్పి'],
+          precautions: ['నిలిచిన నీటిని తొలగించండి', 'దోమల వలలను వాడండి', 'వెంటనే వైద్య సహాయం తీసుకోండి'],
+        },
+        seasonalFlu: {
+          name: 'కాలానుగుణ ఫ్లూ',
+          symptoms: ['దగ్గు మరియు జలుబు', 'ముక్కు కారడం లేదా మూసుకోవడం', 'తేలికపాటి జ్వరం'],
+          precautions: ['తరచుగా చేతులు కడుక్కోండి', 'రద్దీ ఉన్న ప్రాంతాలను తప్పించండి', 'దగ్గేటప్పుడు నోరు కప్పుకోండి'],
+        },
+        gastroenteritis: {
+          name: 'గ్యాస్ట్రోఎంటరైటిస్',
+          symptoms: ['కడుపు నొప్పి', 'వికారం మరియు వాంతులు', 'అతిసారం'],
+          precautions: ['శుభ్రమైన నీరు త్రాగండి', 'తాజాగా వండిన ఆహారం తినండి', 'సరైన పరిశుభ్రతను పాటించండి'],
+        },
+      },
+    },
   },
   gu: {
     appName: 'નભા હેલ્થ કનેક્ટ',
@@ -435,6 +646,36 @@ const translations: Record<Language, LocalizedStrings> = {
     workingSaved: 'તમારું કામ સેવ થઈ ગયું છે',
     willSyncWhenOnline: 'જ્યારે તમે ફરીથી ઓનલાઈન આવશો ત્યારે તે સિંક થશે',
     offlineMode: 'ઓફલાઇન — કનેક્ટ થાય ત્યારે તમારું કામ સિંક થશે',
+    
+    healthNoticeBoard: {
+      title: 'આરોગ્ય સૂચના બોર્ડ',
+      subtitle: 'વર્તમાન આરોગ્ય ચેતવણીઓ અને નિવારણ ટિપ્સ',
+      seeMore: 'વધુ જુઓ',
+      symptoms: 'લક્ષણો',
+      precautions: 'સાવચેતીઓ',
+      diseases: {
+        viralFever: {
+          name: 'વાઇરલ તાવ',
+          symptoms: ['વધારે તાવ (101°F+)', 'શરીરમાં દુખાવો અને માથાનો દુખાવો', 'નબળાઇ અને થાક'],
+          precautions: ['ઘણું પાણી પીવો', 'પૂરતો આરામ કરો', 'તાવ ચાલુ રહે તો ડૉક્ટરની સલાહ લો'],
+        },
+        dengue: {
+          name: 'ડેન્ગ્યુ તાવ',
+          symptoms: ['અચાનક વધારે તાવ', 'તીવ્ર માથાનો દુખાવો', 'આંખોની પાછળ દુખાવો'],
+          precautions: ['ઉભું પાણી હટાવો', 'મચ્છરદાનીનો ઉપયોગ કરો', 'તુરંત વૈદ્યકીય મદદ લો'],
+        },
+        seasonalFlu: {
+          name: 'સીઝનલ ફ્લૂ',
+          symptoms: ['ઉધરસ અને સર્દી', 'નાક વહેવું કે બંધ થવું', 'હળવો તાવ'],
+          precautions: ['વારંવાર હાથ ધોવા', 'ભીડવાળી જગ્યાઓ ટાળો', 'ઉધરસ આવે ત્યારે મોં ઢાંકો'],
+        },
+        gastroenteritis: {
+          name: 'ગેસ્ટ્રોએન્ટેરાઇટિસ',
+          symptoms: ['પેટમાં દુખાવો', 'ઉલટી અને ઘેન', 'ઝાડા'],
+          precautions: ['સાફ પાણી પીવો', 'તાજું બનાવેલું ખાનું ખાવું', 'યોગ્ય સ્વચ્છતા જાળવો'],
+        },
+      },
+    },
   },
   mr: {
     appName: 'नभा हेल्थ कनेक्ट',
@@ -488,6 +729,36 @@ const translations: Record<Language, LocalizedStrings> = {
     workingSaved: 'तुमचे काम सेव्ह झाले आहे',
     willSyncWhenOnline: 'तुम्ही पुन्हा ऑनलाईन आल्यावर ते सिंक होईल',
     offlineMode: 'ऑफलाईन — कनेक्ट झाल्यावर तुमचे काम सिंक होईल',
+    
+    healthNoticeBoard: {
+      title: 'आरोग्य सूचना फलक',
+      subtitle: 'सध्याच्या आरोग्य इशाऱ्या आणि प्रतिबंधक टिप्स',
+      seeMore: 'अधिक पहा',
+      symptoms: 'लक्षणे',
+      precautions: 'खबरदारी',
+      diseases: {
+        viralFever: {
+          name: 'व्हायरल ताप',
+          symptoms: ['जास्त ताप (101°F+)', 'शरीरात दुखणे आणि डोकेदुखी', 'कमकुवतपणा आणि थकवा'],
+          precautions: ['भरपूर पाणी प्या', 'पुरेशी विश्रांती घ्या', 'ताप सुरू राहिल्यास डॉक्टरांचा सल्ला घ्या'],
+        },
+        dengue: {
+          name: 'डेंग्यू ताप',
+          symptoms: ['अचानक जास्त ताप', 'तीव्र डोकेदुखी', 'डोळ्यांच्या मागे दुखणे'],
+          precautions: ['साचलेले पाणी काढून टाका', 'डासांच्या जाळ्यांचा वापर करा', 'ताबडतोब वैद्यकीय मदत घ्या'],
+        },
+        seasonalFlu: {
+          name: 'हंगामी फ्लू',
+          symptoms: ['खोकला आणि सर्दी', 'नाक वाहणे किंवा बंद होणे', 'हलका ताप'],
+          precautions: ['वारंवार हात धुवा', 'गर्दीची ठिकाणे टाळा', 'खोकताना तोंड झाकून घ्या'],
+        },
+        gastroenteritis: {
+          name: 'गॅस्ट्रोएन्टेरायटिस',
+          symptoms: ['पोटात दुखणे', 'मळमळ आणि उलट्या', 'जुलाब'],
+          precautions: ['स्वच्छ पाणी प्या', 'ताजे शिजवलेले अन्न खा', 'योग्य स्वच्छता पाळा'],
+        },
+      },
+    },
   },
   ur: {
     appName: 'نبھا ہیلتھ کنیکٹ',

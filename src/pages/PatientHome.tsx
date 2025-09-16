@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/enhanced-button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { VideoConsultation } from '@/components/patient/VideoConsultation';
+import { HealthNoticeBoard } from '@/components/patient/HealthNoticeBoard';
 import { useI18n } from '@/lib/i18n';
 
 export function PatientHome() {
@@ -120,6 +121,9 @@ export function PatientHome() {
           </Badge>
         </div>
       </Card>
+
+      {/* Health Notice Board */}
+      <HealthNoticeBoard />
 
       {/* Quick Actions */}
       <div className="grid gap-4 sm:grid-cols-2">
