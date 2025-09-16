@@ -210,7 +210,7 @@ export function SymptomChecker() {
             
             <div className="flex items-center gap-3">
               <Badge className={getTriageBadgeClass(triage.recommendation)}>
-                {t[triage.recommendation.replace('-', '') as keyof typeof t]}
+                {(t as any)[triage.recommendation.replace('-', '')] || triage.recommendation}
               </Badge>
               <span className="text-sm text-muted-foreground">
                 {Math.round(triage.confidence * 100)}% confidence

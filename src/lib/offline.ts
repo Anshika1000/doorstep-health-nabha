@@ -1,6 +1,7 @@
 // Offline-first architecture with sync queue and IndexedDB persistence
 
 import { openDB, IDBPDatabase } from 'idb';
+import { useState, useEffect } from 'react';
 
 export interface SyncQueueItem {
   id: string;
@@ -256,7 +257,6 @@ class OfflineManager {
 export const offlineManager = new OfflineManager();
 
 // React hooks for offline functionality
-import { useState, useEffect } from 'react';
 
 export function useOfflineStatus() {
   const [isOnline, setIsOnline] = useState(navigator.onLine);

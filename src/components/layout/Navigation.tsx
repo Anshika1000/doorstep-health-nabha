@@ -55,13 +55,13 @@ export function Navigation({ mode = 'patient', onItemClick }: NavigationProps) {
     }
   };
 
-  const navItems = getNavItems();
+    const navItems = getNavItems();
 
   return (
     <nav className="space-y-1 p-2">
       {navItems.map((item) => {
         const Icon = item.icon;
-        const label = t[item.name as keyof typeof t] || item.name;
+        const label = (t as any)[item.name] || item.name;
         
         return (
           <NavLink
