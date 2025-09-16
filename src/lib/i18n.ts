@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+import { createContext, useContext } from 'react';
 
 export type Language = 'en' | 'hi' | 'pa' | 'bn' | 'ta' | 'te' | 'gu' | 'mr' | 'ur';
 
@@ -93,36 +93,6 @@ export interface LocalizedStrings {
       };
     };
   };
-  
-  // Demo Components
-  demoProfile: {
-    title: string;
-    name: string;
-    age: string;
-    village: string;
-    condition: string;
-    preferredLanguage: string;
-    demoNote: string;
-    diabetes: string;
-    kakarMajra: string;
-    punjabi: string;
-  };
-  
-  demoMedicalRecord: {
-    title: string;
-    sampleRecord: string;
-    consultation: string;
-    symptoms: string;
-    prescription: string;
-    pharmacyStatus: string;
-    nextFollowup: string;
-    viewMore: string;
-    downloadRecord: string;
-    fatigueMedical: string;
-    metforminPrescription: string;
-    availableAtHospital: string;
-    generalPhysician: string;
-  };
 }
 
 const translations: Record<Language, LocalizedStrings> = {
@@ -208,35 +178,6 @@ const translations: Record<Language, LocalizedStrings> = {
         },
       },
     },
-    
-    demoProfile: {
-      title: 'Demo Profile',
-      name: 'Raj Kumar',
-      age: 'Age',
-      village: 'Village',
-      condition: 'Condition',
-      preferredLanguage: 'Preferred Language',
-      demoNote: 'Demo profile for presentation only',
-      diabetes: 'Diabetes (Follow-up)',
-      kakarMajra: 'Kakar Majra, Nabha',
-      punjabi: 'Punjabi',
-    },
-    
-    demoMedicalRecord: {
-      title: 'Recent Records',
-      sampleRecord: 'Sample record for demo',
-      consultation: 'Consultation',
-      symptoms: 'Symptoms',
-      prescription: 'Prescription',
-      pharmacyStatus: 'Pharmacy Status',
-      nextFollowup: 'Next Follow-up',
-      viewMore: 'View More',
-      downloadRecord: 'Download Record',
-      fatigueMedical: 'Fatigue, frequent urination',
-      metforminPrescription: 'Metformin 500 mg, twice daily',
-      availableAtHospital: 'Available at Nabha Civil Hospital Pharmacy',
-      generalPhysician: 'General Physician',
-    },
   },
   hi: {
     appName: 'नाभा हेल्थ कनेक्ट',
@@ -319,35 +260,6 @@ const translations: Record<Language, LocalizedStrings> = {
           precautions: ['साफ पानी पिएं', 'ताजा पका हुआ खाना खाएं', 'उचित स्वच्छता बनाए रखें'],
         },
       },
-    },
-    
-    demoProfile: {
-      title: 'डेमो प्रोफ़ाइल',
-      name: 'राज कुमार',
-      age: 'उम्र',
-      village: 'गांव',
-      condition: 'स्थिति',
-      preferredLanguage: 'पसंदीदा भाषा',
-      demoNote: 'केवल प्रस्तुति के लिए डेमो प्रोफ़ाइल',
-      diabetes: 'मधुमेह (फॉलो-अप)',
-      kakarMajra: 'काकर माजरा, नाभा',
-      punjabi: 'पंजाबी',
-    },
-    
-    demoMedicalRecord: {
-      title: 'हालिया रिकॉर्ड',
-      sampleRecord: 'डेमो के लिए नमूना रिकॉर्ड',
-      consultation: 'परामर्श',
-      symptoms: 'लक्षण',
-      prescription: 'नुस्खा',
-      pharmacyStatus: 'फार्मेसी स्थिति',
-      nextFollowup: 'अगला फॉलो-अप',
-      viewMore: 'और देखें',
-      downloadRecord: 'रिकॉर्ड डाउनलोड करें',
-      fatigueMedical: 'थकान, बार-बार पेशाब आना',
-      metforminPrescription: 'मेटफॉर्मिन 500 मिलीग्राम, दिन में दो बार',
-      availableAtHospital: 'नाभा सिविल अस्पताल फार्मेसी में उपलब्ध',
-      generalPhysician: 'सामान्य चिकित्सक',
     },
   },
   pa: {
@@ -432,35 +344,6 @@ const translations: Record<Language, LocalizedStrings> = {
         },
       },
     },
-    
-    demoProfile: {
-      title: 'ਡੈਮੋ ਪ੍ਰੋਫਾਈਲ',
-      name: 'ਰਾਜ ਕੁਮਾਰ',
-      age: 'ਉਮਰ',
-      village: 'ਪਿੰਡ',
-      condition: 'ਸਥਿਤੀ',
-      preferredLanguage: 'ਪਸੰਦੀਦਾ ਭਾਸ਼ਾ',
-      demoNote: 'ਸਿਰਫ ਪ੍ਰਸਤੁਤੀ ਲਈ ਡੈਮੋ ਪ੍ਰੋਫਾਈਲ',
-      diabetes: 'ਡਾਇਬਟੀਜ਼ (ਫਾਲੋ-ਅੱਪ)',
-      kakarMajra: 'ਕਾਕਰ ਮਾਜਰਾ, ਨਾਭਾ',
-      punjabi: 'ਪੰਜਾਬੀ',
-    },
-    
-    demoMedicalRecord: {
-      title: 'ਤਾਜ਼ਾ ਰਿਕਾਰਡ',
-      sampleRecord: 'ਡੈਮੋ ਲਈ ਨਮੂਨਾ ਰਿਕਾਰਡ',
-      consultation: 'ਸਲਾਹ',
-      symptoms: 'ਲੱਛਣ',
-      prescription: 'ਨੁਸਖਾ',
-      pharmacyStatus: 'ਫਾਰਮੇਸੀ ਸਥਿਤੀ',
-      nextFollowup: 'ਅਗਲਾ ਫਾਲੋ-ਅੱਪ',
-      viewMore: 'ਹੋਰ ਵੇਖੋ',
-      downloadRecord: 'ਰਿਕਾਰਡ ਡਾਉਨਲੋਡ ਕਰੋ',
-      fatigueMedical: 'ਥਕਾਵਟ, ਵਾਰ-ਵਾਰ ਪਿਸ਼ਾਬ ਆਉਣਾ',
-      metforminPrescription: 'ਮੈਟਫਾਰਮਿਨ 500 ਮਿਗ੍ਰਾ, ਦਿਨ ਵਿੱਚ ਦੋ ਵਾਰ',
-      availableAtHospital: 'ਨਾਭਾ ਸਿਵਲ ਹਸਪਤਾਲ ਫਾਰਮੇਸੀ ਵਿੱਚ ਉਪਲਬਧ',
-      generalPhysician: 'ਆਮ ਡਾਕਟਰ',
-    },
   },
   bn: {
     appName: 'নভা হেলথ কানেক্ট',
@@ -543,35 +426,6 @@ const translations: Record<Language, LocalizedStrings> = {
           precautions: ['পরিষ্কার পানি পান করুন', 'তাজা রান্না করা খাবার খান', 'যথাযথ স্বাস্থ্যবিধি মেনে চলুন'],
         },
       },
-    },
-    
-    demoProfile: {
-      title: 'ডেমো প্রোফাইল',
-      name: 'রাজ কুমার',
-      age: 'বয়স',
-      village: 'গ্রাম',
-      condition: 'অবস্থা',
-      preferredLanguage: 'পছন্দের ভাষা',
-      demoNote: 'শুধুমাত্র প্রেজেন্টেশনের জন্য ডেমো প্রোফাইল',
-      diabetes: 'ডায়াবেটিস (ফলো-আপ)',
-      kakarMajra: 'কাকর মাজরা, নাভা',
-      punjabi: 'পাঞ্জাবি',
-    },
-    
-    demoMedicalRecord: {
-      title: 'সাম্প্রতিক রেকর্ড',
-      sampleRecord: 'ডেমোর জন্য নমুনা রেকর্ড',
-      consultation: 'পরামর্শ',
-      symptoms: 'উপসর্গ',
-      prescription: 'প্রেসক্রিপশন',
-      pharmacyStatus: 'ফার্মেসি অবস্থা',
-      nextFollowup: 'পরবর্তী ফলো-আপ',
-      viewMore: 'আরো দেখুন',
-      downloadRecord: 'রেকর্ড ডাউনলোড করুন',
-      fatigueMedical: 'ক্লান্তি, ঘন ঘন প্রস্রাব',
-      metforminPrescription: 'মেটফর্মিন ৫০০ মিগ্রা, দিনে দুইবার',
-      availableAtHospital: 'নাভা সিভিল হাসপাতাল ফার্মেসিতে পাওয়া যাচ্ছে',
-      generalPhysician: 'সাধারণ চিকিৎসক',
     },
   },
   ta: {
@@ -656,35 +510,6 @@ const translations: Record<Language, LocalizedStrings> = {
         },
       },
     },
-    
-    demoProfile: {
-      title: 'டெமো சுயவிவரம்',
-      name: 'ராஜ் குமார்',
-      age: 'வயது',
-      village: 'கிராமம்',
-      condition: 'நிலைமை',
-      preferredLanguage: 'விருப்பமான மொழி',
-      demoNote: 'விளக்கக்காட்சிக்காக மட்டுமே டெமோ சுயவிவரம்',
-      diabetes: 'நீரிழிவு (தொடர்ந்து)',
-      kakarMajra: 'காகர் மாஜரா, நாபா',
-      punjabi: 'பஞ்சாபி',
-    },
-    
-    demoMedicalRecord: {
-      title: 'சமீபத்திய பதிவுகள்',
-      sampleRecord: 'டெமோவிற்கான மாதிரி பதிவு',
-      consultation: 'ஆலோசனை',
-      symptoms: 'அறிகுறிகள்',
-      prescription: 'மருந்து பரிந்துரை',
-      pharmacyStatus: 'மருந்தகம் நிலை',
-      nextFollowup: 'அடுத்த தொடர்நடவடிக்கை',
-      viewMore: 'மேலும் பார்க்க',
-      downloadRecord: 'பதிவை பதிவிறக்கம்',
-      fatigueMedical: 'களைப்பு, அடிக்கடி சிறுநீர்',
-      metforminPrescription: 'மெட்ஃபார்மின் 500 மிகி, நாளுக்கு இரண்டு முறை',
-      availableAtHospital: 'நாபா சிவில் மருத்துவமனை மருந்தகத்தில் கிடைக்கும்',
-      generalPhysician: 'பொது மருத்துவர்',
-    },
   },
   te: {
     appName: 'నభా హెల్త్ కనెక్ట్',
@@ -768,35 +593,6 @@ const translations: Record<Language, LocalizedStrings> = {
         },
       },
     },
-    
-    demoProfile: {
-      title: 'డెమో ప్రొఫైల్',
-      name: 'రాజ్ కుమార్',
-      age: 'వయస్సు',
-      village: 'గ్రామం',
-      condition: 'పరిస్థితి',
-      preferredLanguage: 'ప్రాధాన్య భాష',
-      demoNote: 'ప్రెజెంటేషన్ కోసం మాత్రమే డెమో ప్రొఫైల్',
-      diabetes: 'మధుమేహం (ఫాలో-అప్)',
-      kakarMajra: 'కాకర్ మాజ్రా, నాభా',
-      punjabi: 'పంజాబీ',
-    },
-    
-    demoMedicalRecord: {
-      title: 'ఇటీవలి రికార్డులు',
-      sampleRecord: 'డెమో కోసం నమూనా రికార్డు',
-      consultation: 'సలహా',
-      symptoms: 'లక్షణాలు',
-      prescription: 'మందు',
-      pharmacyStatus: 'ఫార్మసీ స్థితి',
-      nextFollowup: 'తదుపరి ఫాలో-అప్',
-      viewMore: 'మరిన్ని చూడండి',
-      downloadRecord: 'రికార్డు డౌన్‌లోడ్ చేయండి',
-      fatigueMedical: 'అలసట, తరచుగా మూత్రవిసర్జన',
-      metforminPrescription: 'మెట్‌ఫార్మిన్ 500 మిగ్రా, రోజుకు రెండుసార్లు',
-      availableAtHospital: 'నాభా సివిల్ హాస్పిటల్ ఫార్మసీలో అందుబాటులో ఉంది',
-      generalPhysician: 'సాధారణ వైద్యుడు',
-    },
   },
   gu: {
     appName: 'નભા હેલ્થ કનેક્ટ',
@@ -879,35 +675,6 @@ const translations: Record<Language, LocalizedStrings> = {
           precautions: ['સાફ પાણી પીવો', 'તાજું બનાવેલું ખાનું ખાવું', 'યોગ્ય સ્વચ્છતા જાળવો'],
         },
       },
-    },
-    
-    demoProfile: {
-      title: 'ડેમો પ્રોફાઇલ',
-      name: 'રાજ કુમાર',
-      age: 'ઉંમર',
-      village: 'ગામ',
-      condition: 'સ્થિતિ',
-      preferredLanguage: 'પસંદીદા ભાષા',
-      demoNote: 'માત્ર પ્રેઝન્ટેશન માટે ડેમો પ્રોફાઇલ',
-      diabetes: 'ડાયાબિટીસ (ફોલો-અપ)',
-      kakarMajra: 'કાકર માજરા, નાભા',
-      punjabi: 'પંજાબી',
-    },
-    
-    demoMedicalRecord: {
-      title: 'તાજેતરના રેકોર્ડ્સ',
-      sampleRecord: 'ડેમો માટે નમૂના રેકોર્ડ',
-      consultation: 'સલાહ',
-      symptoms: 'લક્ષણો',
-      prescription: 'દવા',
-      pharmacyStatus: 'ફાર્મેસી સ્થિતિ',
-      nextFollowup: 'આગલો ફોલો-અપ',
-      viewMore: 'વધુ જુઓ',
-      downloadRecord: 'રેકોર્ડ ડાઉનલોડ કરો',
-      fatigueMedical: 'થાક, વારંવાર પેશાબ',
-      metforminPrescription: 'મેટફોર્મિન 500 મિગ્રા, દિવસમાં બે વાર',
-      availableAtHospital: 'નાભા સિવિલ હોસ્પિટલ ફાર્મેસીમાં ઉપલબ્ધ',
-      generalPhysician: 'સામાન્ય ચિકિત્સક',
     },
   },
   mr: {
@@ -1075,95 +842,8 @@ const translations: Record<Language, LocalizedStrings> = {
         },
       },
     },
-    
-    demoProfile: {
-      title: 'ڈیمو پروفائل',
-      name: 'راج کمار',
-      age: 'عمر',
-      village: 'گاؤں',
-      condition: 'حالت',
-      preferredLanguage: 'ترجیحی زبان',
-      demoNote: 'صرف پریزینٹیشن کے لیے ڈیمو پروفائل',
-      diabetes: 'ذیابیطس (فالو اپ)',
-      kakarMajra: 'کاکر ماجرہ، نابھا',
-      punjabi: 'پنجابی',
-    },
-    
-    demoMedicalRecord: {
-      title: 'حالیہ ریکارڈز',
-      sampleRecord: 'ڈیمو کے لیے نمونہ ریکارڈ',
-      consultation: 'مشاورت',
-      symptoms: 'علامات',
-      prescription: 'نسخہ',
-      pharmacyStatus: 'فارمیسی کی صورتحال',
-      nextFollowup: 'اگلا فالو اپ',
-      viewMore: 'مزید دیکھیں',
-      downloadRecord: 'ریکارڈ ڈاؤن لوڈ کریں',
-      fatigueMedical: 'تھکان، بار بار پیشاب آنا',
-      metforminPrescription: 'میٹفارمن 500 ملی گرام، دن میں دو بار',
-      availableAtHospital: 'نابھا سول ہسپتال فارمیسی میں دستیاب',
-      generalPhysician: 'جنرل فزیشن',
-    },
-    
-    demoProfile: {
-      title: 'डेमो प्रोफाइल',
-      name: 'राज कुमार',
-      age: 'वय',
-      village: 'गाव',
-      condition: 'स्थिती',
-      preferredLanguage: 'पसंतीची भाषा',
-      demoNote: 'केवळ सादरीकरणासाठी डेमो प्रोफाइल',
-      diabetes: 'मधुमेह (फॉलो-अप)',
-      kakarMajra: 'काकर माजरा, नाभा',
-      punjabi: 'पंजाबी',
-    },
-    
-    demoMedicalRecord: {
-      title: 'अलीकडील रेकॉर्ड',
-      sampleRecord: 'डेमोसाठी नमुना रेकॉर्ड',
-      consultation: 'सल्ला',
-      symptoms: 'लक्षणे',
-      prescription: 'औषध',
-      pharmacyStatus: 'फार्मसी स्थिती',
-      nextFollowup: 'पुढील फॉलो-अप',
-      viewMore: 'अधिक पहा',
-      downloadRecord: 'रेकॉर्ड डाउनलोड करा',
-      fatigueMedical: 'थकवा, वारंवार लघवी',
-      metforminPrescription: 'मेटफॉर्मिन 500 मिग्रा, दिवसातून दोनदा',
-      availableAtHospital: 'नाभा सिव्हिल हॉस्पिटल फार्मसीमध्ये उपलब्ध',
-      generalPhysician: 'सामान्य डॉक्टर',
-    },
   },
 };
-
-export function useI18n() {
-  const [language, setLanguage] = React.useState<Language>(() => {
-    // Check localStorage first, then browser preference, fallback to English
-    const saved = typeof window !== 'undefined' ? localStorage.getItem('nabha-health-language') : null;
-    if (saved && saved in translations) {
-      return saved as Language;
-    }
-    
-    // Browser language detection with fallback
-    const browserLang = typeof navigator !== 'undefined' ? navigator.language.slice(0, 2) : 'en';
-    if (browserLang === 'hi') return 'hi';
-    if (browserLang === 'pa') return 'pa';
-    return 'en';
-  });
-
-  const setLanguageAndPersist = React.useCallback((lang: Language) => {
-    setLanguage(lang);
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('nabha-health-language', lang);
-    }
-  }, []);
-
-  return {
-    language,
-    setLanguage: setLanguageAndPersist,
-    t: translations[language],
-  };
-}
 
 export const getTranslations = (language: Language): LocalizedStrings => {
   return translations[language] || translations.en;
@@ -1176,3 +856,11 @@ export interface I18nContextType {
 }
 
 export const I18nContext = createContext<I18nContextType | undefined>(undefined);
+
+export const useI18n = () => {
+  const context = useContext(I18nContext);
+  if (!context) {
+    throw new Error('useI18n must be used within an I18nProvider');
+  }
+  return context;
+};
