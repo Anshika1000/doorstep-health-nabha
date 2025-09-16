@@ -5,6 +5,8 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { VideoConsultation } from '@/components/patient/VideoConsultation';
 import { HealthNoticeBoard } from '@/components/patient/HealthNoticeBoard';
+import { DemoProfile } from '@/components/patient/DemoProfile';
+import { DemoMedicalRecord } from '@/components/patient/DemoMedicalRecord';
 import { useI18n } from '@/lib/i18n';
 
 export function PatientHome() {
@@ -201,6 +203,12 @@ export function PatientHome() {
           </div>
         </div>
       </Card>
+
+      {/* Demo Profile */}
+      <DemoProfile />
+
+      {/* Demo Medical Record */}
+      <DemoMedicalRecord />
 
       {/* Video Consultation Section */}
       <VideoConsultation />
