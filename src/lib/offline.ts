@@ -1,7 +1,7 @@
 // Offline-first architecture with sync queue and IndexedDB persistence
 
+import React, { useState, useEffect } from 'react';
 import { openDB, IDBPDatabase } from 'idb';
-import { useState, useEffect } from 'react';
 
 export interface SyncQueueItem {
   id: string;
