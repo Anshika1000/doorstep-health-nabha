@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from './Header';
 import { Navigation } from './Navigation';
+import { ConvAIWidget } from '@/components/ui/ConvAIWidget';
 import { cn } from '@/lib/utils';
 import { offlineManager } from '@/lib/offline';
 
@@ -50,6 +51,9 @@ export function MainLayout({ children, mode = 'patient' }: MainLayoutProps) {
           </div>
         </main>
       </div>
+      
+      {/* ElevenLabs ConvAI Widget */}
+      <ConvAIWidget />
     </div>
   );
 }
