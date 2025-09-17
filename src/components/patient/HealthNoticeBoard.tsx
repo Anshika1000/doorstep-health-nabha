@@ -28,7 +28,7 @@ export function HealthNoticeBoard() {
             </p>
           </div>
           <Badge className="triage-badge chw-visit">
-            Live
+            {t.healthNoticeBoard.live}
           </Badge>
         </div>
       </CardHeader>
@@ -89,7 +89,7 @@ export function HealthNoticeBoard() {
             {showAll ? (
               <>
                 <ChevronUp className="h-4 w-4 mr-2" />
-                Show Less
+                {t.healthNoticeBoard.showLess}
               </>
             ) : (
               <>

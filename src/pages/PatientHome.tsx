@@ -13,14 +13,14 @@ export function PatientHome() {
   const quickActions = [
     {
       title: t.bookConsult,
-      description: 'Get medical advice from qualified doctors',
+      description: t.patientHome?.consultDescription || 'Get medical advice from qualified doctors',
       icon: MessageSquare,
       href: '/consult',
       variant: 'hero' as const,
     },
     {
       title: t.addVitals,
-      description: 'Record your health measurements',
+      description: t.patientHome?.vitalsDescription || 'Record your health measurements',
       icon: Activity,
       href: '/vitals',
       variant: 'warm' as const,
@@ -91,7 +91,7 @@ export function PatientHome() {
       {/* Welcome Header */}
       <div className="space-y-2">
         <h1 className="text-2xl font-bold text-foreground">
-          Welcome to {t.appName}
+          {t.patientHome?.welcomeTo || 'Welcome to'} {t.appName}
         </h1>
         <p className="text-muted-foreground">
           {t.tagline}
@@ -106,18 +106,18 @@ export function PatientHome() {
           </div>
           <div className="flex-1 space-y-1">
             <h3 className="font-semibold text-foreground">
-              Nabha Civil Hospital Network
+              {t.patientHome?.hospitalNetwork || 'Nabha Civil Hospital Network'}
             </h3>
             <p className="text-sm text-muted-foreground">
-              11/23 doctors staffed • Serving 173 villages
+              11/23 {t.patientHome?.doctorsStaffed || 'doctors staffed'} • {t.patientHome?.servingVillages || 'Serving'} 173 villages
             </p>
             <div className="flex items-center gap-2 text-xs text-muted-foreground">
               <Clock className="h-3 w-3" />
-              <span>Available 24/7 for emergencies</span>
+              <span>{t.patientHome?.availableEmergency || 'Available 24/7 for emergencies'}</span>
             </div>
           </div>
           <Badge className="triage-badge doctor-consult">
-            Connected
+            {t.patientHome?.connected || 'Connected'}
           </Badge>
         </div>
       </Card>

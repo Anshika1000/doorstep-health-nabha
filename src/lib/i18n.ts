@@ -68,6 +68,8 @@ export interface LocalizedStrings {
     title: string;
     subtitle: string;
     seeMore: string;
+    showLess: string;
+    live: string;
     symptoms: string;
     precautions: string;
     diseases: {
@@ -91,6 +93,62 @@ export interface LocalizedStrings {
         symptoms: string[];
         precautions: string[];
       };
+    };
+  };
+
+  // Patient Home Page
+  patientHome: {
+    welcomeTo: string;
+    consultDescription: string;
+    vitalsDescription: string;
+    hospitalNetwork: string;
+    doctorsStaffed: string;
+    servingVillages: string;
+    availableEmergency: string;
+    connected: string;
+    yourHealthSummary: string;
+    consultations: string;
+    vitalsRecorded: string;
+    prescriptions: string;
+    lastCheckup: string;
+    recentActivity: string;
+    viewAll: string;
+    communityHealthWorker: string;
+    chwDescription: string;
+    contactCHW: string;
+    
+    // Activity types
+    activities: {
+      consultCompleted: string;
+      consultCompletedDesc: string;
+      bloodPressureRecorded: string;
+      bloodPressureDesc: string;
+      prescriptionIssued: string;
+      prescriptionDesc: string;
+      bloodGlucoseMeasured: string;
+      bloodGlucoseDesc: string;
+      followupScheduled: string;
+      followupDesc: string;
+      labResults: string;
+      labResultsDesc: string;
+      temperatureRecorded: string;
+      temperatureDesc: string;
+    };
+    
+    // Status
+    status: {
+      completed: string;
+      normal: string;
+      available: string;
+      scheduled: string;
+    };
+    
+    // Time periods
+    timeAgo: {
+      hoursAgo: string;
+      dayAgo: string;
+      daysAgo: string;
+      weekAgo: string;
     };
   };
 }
@@ -153,6 +211,8 @@ const translations: Record<Language, LocalizedStrings> = {
       title: 'Health Notice Board',
       subtitle: 'Current Health Alerts & Prevention Tips',
       seeMore: 'See More',
+      showLess: 'Show Less', 
+      live: 'Live',
       symptoms: 'Symptoms',
       precautions: 'Precautions',
       diseases: {
@@ -176,6 +236,58 @@ const translations: Record<Language, LocalizedStrings> = {
           symptoms: ['Stomach pain', 'Nausea and vomiting', 'Diarrhea'],
           precautions: ['Drink clean water', 'Eat freshly cooked food', 'Maintain proper hygiene'],
         },
+      },
+    },
+
+    patientHome: {
+      welcomeTo: 'Welcome to',
+      consultDescription: 'Get medical advice from qualified doctors',
+      vitalsDescription: 'Record your health measurements',
+      hospitalNetwork: 'Nabha Civil Hospital Network',
+      doctorsStaffed: 'doctors staffed',
+      servingVillages: 'Serving',
+      availableEmergency: 'Available 24/7 for emergencies',
+      connected: 'Connected',
+      yourHealthSummary: 'Your Health Summary',
+      consultations: 'Consultations',
+      vitalsRecorded: 'Vitals Recorded',
+      prescriptions: 'Prescriptions',
+      lastCheckup: 'Last Checkup',
+      recentActivity: 'Recent Activity',
+      viewAll: 'View All',
+      communityHealthWorker: 'Community Health Worker',
+      chwDescription: 'Available for home visits and assistance',
+      contactCHW: 'Contact CHW',
+      
+      activities: {
+        consultCompleted: 'Video consultation completed',
+        consultCompletedDesc: 'General Medicine',
+        bloodPressureRecorded: 'Blood pressure recorded',
+        bloodPressureDesc: 'Normal range',
+        prescriptionIssued: 'E-prescription issued',
+        prescriptionDesc: 'Available at local pharmacy',
+        bloodGlucoseMeasured: 'Blood glucose measured',
+        bloodGlucoseDesc: 'Normal fasting level',
+        followupScheduled: 'Follow-up appointment scheduled',
+        followupDesc: 'Pediatrics',
+        labResults: 'Lab test results available',
+        labResultsDesc: 'All values normal',
+        temperatureRecorded: 'Temperature recorded',
+        temperatureDesc: 'Normal body temperature',
+      },
+      
+      status: {
+        completed: 'completed',
+        normal: 'normal',
+        available: 'available',
+        scheduled: 'scheduled',
+      },
+      
+      timeAgo: {
+        hoursAgo: 'hours ago',
+        dayAgo: 'day ago',
+        daysAgo: 'days ago',
+        weekAgo: 'week ago',
       },
     },
   },
@@ -236,6 +348,8 @@ const translations: Record<Language, LocalizedStrings> = {
       title: 'स्वास्थ्य सूचना बोर्ड',
       subtitle: 'वर्तमान स्वास्थ्य चेतावनी और रोकथाम की जानकारी',
       seeMore: 'और देखें',
+      showLess: 'कम देखें',
+      live: 'लाइव',
       symptoms: 'लक्षण',
       precautions: 'सावधानियां',
       diseases: {
@@ -259,6 +373,58 @@ const translations: Record<Language, LocalizedStrings> = {
           symptoms: ['पेट में दर्द', 'जी मिचलाना और उल्टी', 'दस्त'],
           precautions: ['साफ पानी पिएं', 'ताजा पका हुआ खाना खाएं', 'उचित स्वच्छता बनाए रखें'],
         },
+      },
+    },
+
+    patientHome: {
+      welcomeTo: 'स्वागत है',
+      consultDescription: 'योग्य डॉक्टरों से चिकित्सा सलाह लें',
+      vitalsDescription: 'अपने स्वास्थ्य संकेत दर्ज करें',
+      hospitalNetwork: 'नाभा सिविल अस्पताल नेटवर्क',
+      doctorsStaffed: 'डॉक्टर कार्यरत',
+      servingVillages: 'सेवा में',
+      availableEmergency: 'आपातकाल के लिए 24/7 उपलब्ध',
+      connected: 'जुड़ा हुआ',
+      yourHealthSummary: 'आपका स्वास्थ्य सारांश',
+      consultations: 'परामर्श',
+      vitalsRecorded: 'जीवन संकेत दर्ज',
+      prescriptions: 'नुस्खे',
+      lastCheckup: 'अंतिम जांच',
+      recentActivity: 'हाल की गतिविधि',
+      viewAll: 'सभी देखें',
+      communityHealthWorker: 'सामुदायिक स्वास्थ्य कार्यकर्ता',
+      chwDescription: 'घर पर जाकर सेवा और सहायता के लिए उपलब्ध',
+      contactCHW: 'CHW से संपर्क करें',
+      
+      activities: {
+        consultCompleted: 'वीडियो परामर्श पूरा हुआ',
+        consultCompletedDesc: 'सामान्य चिकित्सा',
+        bloodPressureRecorded: 'रक्तचाप दर्ज किया गया',
+        bloodPressureDesc: 'सामान्य सीमा',
+        prescriptionIssued: 'ई-नुस्खा जारी किया गया',
+        prescriptionDesc: 'स्थानीय फार्मेसी में उपलब्ध',
+        bloodGlucoseMeasured: 'रक्त शर्करा मापी गई',
+        bloodGlucoseDesc: 'सामान्य उपवास स्तर',
+        followupScheduled: 'फॉलो-अप अपॉइंटमेंट निर्धारित',
+        followupDesc: 'बाल चिकित्सा',
+        labResults: 'प्रयोगशाला परीक्षण परिणाम उपलब्ध',
+        labResultsDesc: 'सभी मान सामान्य',
+        temperatureRecorded: 'तापमान दर्ज किया गया',
+        temperatureDesc: 'सामान्य शरीर का तापमान',
+      },
+      
+      status: {
+        completed: 'पूर्ण',
+        normal: 'सामान्य',
+        available: 'उपलब्ध',
+        scheduled: 'निर्धारित',
+      },
+      
+      timeAgo: {
+        hoursAgo: 'घंटे पहले',
+        dayAgo: 'दिन पहले',
+        daysAgo: 'दिन पहले',
+        weekAgo: 'सप्ताह पहले',
       },
     },
   },
@@ -319,6 +485,8 @@ const translations: Record<Language, LocalizedStrings> = {
       title: 'ਸਿਹਤ ਸੂਚਨਾ ਬੋਰਡ',
       subtitle: 'ਮੌਜੂਦਾ ਸਿਹਤ ਚੇਤਾਵਨੀਆਂ ਅਤੇ ਰੋਕਥਾਮ ਦੀ ਜਾਣਕਾਰੀ',
       seeMore: 'ਹੋਰ ਵੇਖੋ',
+      showLess: 'ਘੱਟ ਵੇਖੋ',
+      live: 'ਲਾਈਵ',
       symptoms: 'ਲੱਛਣ',
       precautions: 'ਸਾਵਧਾਨੀਆਂ',
       diseases: {
@@ -342,6 +510,58 @@ const translations: Record<Language, LocalizedStrings> = {
           symptoms: ['ਪੇਟ ਵਿੱਚ ਦਰਦ', 'ਜੀ ਮਿਚਲਾਉਣਾ ਅਤੇ ਉਲਟੀ', 'ਦਸਤ'],
           precautions: ['ਸਾਫ਼ ਪਾਣੀ ਪੀਓ', 'ਤਾਜ਼ਾ ਪਕਿਆ ਖਾਣਾ ਖਾਓ', 'ਸਫ਼ਾਈ ਬਣਾਈ ਰੱਖੋ'],
         },
+      },
+    },
+
+    patientHome: {
+      welcomeTo: 'ਜੀ ਆਇਆਂ ਨੂੰ',
+      consultDescription: 'ਯੋਗ ਡਾਕਟਰਾਂ ਤੋਂ ਮੈਡੀਕਲ ਸਲਾਹ ਲਓ',
+      vitalsDescription: 'ਆਪਣੇ ਸਿਹਤ ਮਾਪ ਦਰਜ ਕਰੋ',
+      hospitalNetwork: 'ਨਾਭਾ ਸਿਵਲ ਹਸਪਤਾਲ ਨੈੱਟਵਰਕ',
+      doctorsStaffed: 'ਡਾਕਟਰ ਤੈਨਾਤ',
+      servingVillages: 'ਸੇਵਾ ਵਿੱਚ',
+      availableEmergency: 'ਐਮਰਜੈਂਸੀ ਲਈ 24/7 ਉਪਲਬਧ',
+      connected: 'ਜੁੜਿਆ ਹੋਇਆ',
+      yourHealthSummary: 'ਤੁਹਾਡਾ ਸਿਹਤ ਸਾਰ',
+      consultations: 'ਸਲਾਹ',
+      vitalsRecorded: 'ਜੀਵਨ ਸੰਕੇਤ ਦਰਜ',
+      prescriptions: 'ਨੁਸਖੇ',
+      lastCheckup: 'ਆਖਰੀ ਜਾਂਚ',
+      recentActivity: 'ਹਾਲ ਦੀ ਗਤੀਵਿਧੀ',
+      viewAll: 'ਸਭ ਵੇਖੋ',
+      communityHealthWorker: 'ਕਮਿਊਨਿਟੀ ਹੈਲਥ ਵਰਕਰ',
+      chwDescription: 'ਘਰੇਲੂ ਮੁਲਾਕਾਤ ਅਤੇ ਸਹਾਇਤਾ ਲਈ ਉਪਲਬਧ',
+      contactCHW: 'CHW ਨਾਲ ਸੰਪਰਕ ਕਰੋ',
+      
+      activities: {
+        consultCompleted: 'ਵੀਡੀਓ ਸਲਾਹ ਪੂਰੀ ਹੋਈ',
+        consultCompletedDesc: 'ਜਨਰਲ ਮੈਡੀਸਨ',
+        bloodPressureRecorded: 'ਬਲੱਡ ਪ੍ਰੈਸ਼ਰ ਦਰਜ ਕੀਤਾ ਗਿਆ',
+        bloodPressureDesc: 'ਸਾਧਾਰਣ ਰੇਂਜ',
+        prescriptionIssued: 'ਈ-ਨੁਸਖਾ ਜਾਰੀ ਕੀਤਾ ਗਿਆ',
+        prescriptionDesc: 'ਸਥਾਨਕ ਫਾਰਮੇਸੀ ਵਿੱਚ ਉਪਲਬਧ',
+        bloodGlucoseMeasured: 'ਖੂਨ ਵਿੱਚ ਸ਼ੂਗਰ ਮਾਪੀ ਗਈ',
+        bloodGlucoseDesc: 'ਸਾਧਾਰਣ ਖਾਲੀ ਪੇਟ ਪੱਧਰ',
+        followupScheduled: 'ਫਾਲੋ-ਅੱਪ ਮੁਲਾਕਾਤ ਨਿਰਧਾਰਿਤ',
+        followupDesc: 'ਬਾਲ ਰੋਗ ਵਿਭਾਗ',
+        labResults: 'ਲੈਬ ਟੈਸਟ ਦੇ ਨਤੀਜੇ ਉਪਲਬਧ',
+        labResultsDesc: 'ਸਾਰੇ ਮੁੱਲ ਸਾਧਾਰਣ',
+        temperatureRecorded: 'ਤਾਪਮਾਨ ਦਰਜ ਕੀਤਾ ਗਿਆ',
+        temperatureDesc: 'ਸਾਧਾਰਣ ਸਰੀਰਕ ਤਾਪਮਾਨ',
+      },
+      
+      status: {
+        completed: 'ਪੂਰਾ ਹੋਇਆ',
+        normal: 'ਸਾਧਾਰਣ',
+        available: 'ਉਪਲਬਧ',
+        scheduled: 'ਨਿਰਧਾਰਿਤ',
+      },
+      
+      timeAgo: {
+        hoursAgo: 'ਘੰਟੇ ਪਹਿਲਾਂ',
+        dayAgo: 'ਦਿਨ ਪਹਿਲਾਂ',
+        daysAgo: 'ਦਿਨ ਪਹਿਲਾਂ',
+        weekAgo: 'ਹਫ਼ਤਾ ਪਹਿਲਾਂ',
       },
     },
   },
@@ -402,6 +622,8 @@ const translations: Record<Language, LocalizedStrings> = {
       title: 'স্বাস্থ্য নোটিশ বোর্ড',
       subtitle: 'বর্তমান স্বাস্থ্য সতর্কতা ও প্রতিরোধের তথ্য',
       seeMore: 'আরো দেখুন',
+      showLess: 'কম দেখুন',
+      live: 'লাইভ',
       symptoms: 'লক্ষণ',
       precautions: 'সতর্কতা',
       diseases: {
@@ -425,6 +647,58 @@ const translations: Record<Language, LocalizedStrings> = {
           symptoms: ['পেটে ব্যথা', 'বমি বমি ভাব ও বমি', 'ডায়রিয়া'],
           precautions: ['পরিষ্কার পানি পান করুন', 'তাজা রান্না করা খাবার খান', 'যথাযথ স্বাস্থ্যবিধি মেনে চলুন'],
         },
+      },
+    },
+
+    patientHome: {
+      welcomeTo: 'স্বাগতম',
+      consultDescription: 'যোগ্য ডাক্তারদের কাছ থেকে চিকিৎসা পরামর্শ নিন',
+      vitalsDescription: 'আপনার স্বাস্থ্য পরিমাপ রেকর্ড করুন',
+      hospitalNetwork: 'নভা সিভিল হাসপাতাল নেটওয়ার্ক',
+      doctorsStaffed: 'ডাক্তার কর্মরত',
+      servingVillages: 'সেবা প্রদান',
+      availableEmergency: 'জরুরী অবস্থার জন্য ২৪/৭ উপলব্ধ',
+      connected: 'সংযুক্ত',
+      yourHealthSummary: 'আপনার স্বাস্থ্য সারসংক্ষেপ',
+      consultations: 'পরামর্শ',
+      vitalsRecorded: 'জীবন সংকেত রেকর্ড',
+      prescriptions: 'প্রেসক্রিপশন',
+      lastCheckup: 'শেষ চেকআপ',
+      recentActivity: 'সাম্প্রতিক কার্যকলাপ',
+      viewAll: 'সব দেখুন',
+      communityHealthWorker: 'কমিউনিটি স্বাস্থ্যকর্মী',
+      chwDescription: 'বাড়িতে পরিদর্শন ও সহায়তার জন্য উপলব্ধ',
+      contactCHW: 'CHW এর সাথে যোগাযোগ করুন',
+      
+      activities: {
+        consultCompleted: 'ভিডিও পরামর্শ সম্পন্ন',
+        consultCompletedDesc: 'সাধারণ চিকিৎসা',
+        bloodPressureRecorded: 'রক্তচাপ রেকর্ড করা হয়েছে',
+        bloodPressureDesc: 'স্বাভাবিক পরিসর',
+        prescriptionIssued: 'ই-প্রেসক্রিপশন জারি করা হয়েছে',
+        prescriptionDesc: 'স্থানীয় ফার্মেসিতে উপলব্ধ',
+        bloodGlucoseMeasured: 'রক্তে গ্লুকোজ পরিমাপ করা হয়েছে',
+        bloodGlucoseDesc: 'স্বাভাবিক উপবাসের মাত্রা',
+        followupScheduled: 'ফলো-আপ অ্যাপয়েন্টমেন্ট নির্ধারিত',
+        followupDesc: 'শিশু বিশেষজ্ঞ',
+        labResults: 'ল্যাব পরীক্ষার ফলাফল উপলব্ধ',
+        labResultsDesc: 'সব মান স্বাভাবিক',
+        temperatureRecorded: 'তাপমাত্রা রেকর্ড করা হয়েছে',
+        temperatureDesc: 'স্বাভাবিক শরীরের তাপমাত্রা',
+      },
+      
+      status: {
+        completed: 'সম্পন্ন',
+        normal: 'স্বাভাবিক',
+        available: 'উপলব্ধ',
+        scheduled: 'নির্ধারিত',
+      },
+      
+      timeAgo: {
+        hoursAgo: 'ঘন্টা আগে',
+        dayAgo: 'দিন আগে',
+        daysAgo: 'দিন আগে',
+        weekAgo: 'সপ্তাহ আগে',
       },
     },
   },
@@ -485,6 +759,8 @@ const translations: Record<Language, LocalizedStrings> = {
       title: 'சுகாதார அறிவிப்பு பலகை',
       subtitle: 'தற்போதைய சுகாதார எச்சரிக்கைகள் & தடுப்பு குறிப்புகள்',
       seeMore: 'மேலும் பார்க்க',
+      showLess: 'குறைவாக பார்க்க',
+      live: 'நேரலை',
       symptoms: 'அறிகுறிகள்',
       precautions: 'முன்னெச்சரிக்கைகள்',
       diseases: {
@@ -508,6 +784,58 @@ const translations: Record<Language, LocalizedStrings> = {
           symptoms: ['வயிற்று வலி', 'குமட்டல் மற்றும் வாந்தி', 'வயிற்றுப்போக்கு'],
           precautions: ['சுத்தமான நீர் குடிக்கவும்', 'புதிதாக சமைத்த உணவை உண்ணவும்', 'சரியான சுகாதாரத்தைப் பேணவும்'],
         },
+      },
+    },
+
+    patientHome: {
+      welcomeTo: 'வரவேற்கிறோம்',
+      consultDescription: 'தகுதிவாய்ந்த மருத்துவர்களிடமிருந்து மருத்துவ ஆலோசனை பெறுங்கள்',
+      vitalsDescription: 'உங்கள் நலம் அளவீடுகளை பதிவு செய்யுங்கள்',
+      hospitalNetwork: 'நபா சிவில் மருத்துவமனை நெட்வொர்க்',
+      doctorsStaffed: 'மருத்துவர்கள் பணியில்',
+      servingVillages: 'சேவை செய்யும்',
+      availableEmergency: 'அவசரநிலைகளுக்கு 24/7 கிடைக்கும்',
+      connected: 'இணைக்கப்பட்டது',
+      yourHealthSummary: 'உங்கள் நலம் சுருக்கம்',
+      consultations: 'ஆலோசனைகள்',
+      vitalsRecorded: 'வாழ்க்கை அறிகுறிகள் பதிவு',
+      prescriptions: 'மருந்து பரிந்துரைகள்',
+      lastCheckup: 'கடைசி பரிசோதனை',
+      recentActivity: 'சமீபத்திய செயல்பாடு',
+      viewAll: 'அனைத்தையும் பார்க்கவும்',
+      communityHealthWorker: 'சமுதாய நல ஊழியர்',
+      chwDescription: 'வீட்டு விஜயங்கள் மற்றும் உதவிக்கு கிடைக்கும்',
+      contactCHW: 'CHW ஐ தொடர்பு கொள்ளவும்',
+      
+      activities: {
+        consultCompleted: 'வீடியோ ஆலோசனை முடிந்தது',
+        consultCompletedDesc: 'பொது மருத்துவம்',
+        bloodPressureRecorded: 'இரத்த அழுத்தம் பதிவு செய்யப்பட்டது',
+        bloodPressureDesc: 'சாதாரண அளவு',
+        prescriptionIssued: 'மின்-மருந்து பரிந்துரை வழங்கப்பட்டது',
+        prescriptionDesc: 'உள்ளூர் மருந்தகத்தில் கிடைக்கும்',
+        bloodGlucoseMeasured: 'இரத்த குளுக்கோஸ் அளவிடப்பட்டது',
+        bloodGlucoseDesc: 'சாதாரண உண்ணாவிரத நிலை',
+        followupScheduled: 'தொடர்-சிகிச்சை சந்திப்பு திட்டமிடப்பட்டது',
+        followupDesc: 'குழந்தைகள் மருத்துவம்',
+        labResults: 'ஆய்வக பரிசோதனை முடிவுகள் கிடைக்கும்',
+        labResultsDesc: 'அனைத்து மதிப்புகளும் சாதாரணம்',
+        temperatureRecorded: 'வெப்பநிலை பதிவு செய்யப்பட்டது',
+        temperatureDesc: 'சாதாரண உடல் வெப்பநிலை',
+      },
+      
+      status: {
+        completed: 'முடிந்தது',
+        normal: 'சாதாரணம்',
+        available: 'கிடைக்கும்',
+        scheduled: 'திட்டமிடப்பட்டது',
+      },
+      
+      timeAgo: {
+        hoursAgo: 'மணி நேரங்களுக்கு முன்',
+        dayAgo: 'நாளுக்கு முன்',
+        daysAgo: 'நாட்களுக்கு முன்',
+        weekAgo: 'வாரத்திற்கு முன்',
       },
     },
   },
@@ -568,6 +896,8 @@ const translations: Record<Language, LocalizedStrings> = {
       title: 'ఆరోగ్య నోటీసు బోర్డు',
       subtitle: 'ప్రస్తుత ఆరోగ్య హెచ్చరికలు & నివారణ చిట్కాలు',
       seeMore: 'మరింత చూడండి',
+      showLess: 'తక్కువ చూడండి',
+      live: 'లైవ్',
       symptoms: 'లక్షణాలు',
       precautions: 'జాగ్రత్తలు',
       diseases: {
@@ -651,6 +981,11 @@ const translations: Record<Language, LocalizedStrings> = {
       title: 'આરોગ્ય સૂચના બોર્ડ',
       subtitle: 'વર્તમાન આરોગ્ય ચેતવણીઓ અને નિવારણ ટિપ્સ',
       seeMore: 'વધુ જુઓ',
+      showLess: 'ઓછું જુઓ',
+      live: 'લાઈવ',
+      symptoms: 'લક્ષણો',
+      precautions: 'સાવધાનીઓ',
+      seeMore: 'વધુ જુઓ',
       symptoms: 'લક્ષણો',
       precautions: 'સાવચેતીઓ',
       diseases: {
@@ -673,9 +1008,61 @@ const translations: Record<Language, LocalizedStrings> = {
           name: 'ગેસ્ટ્રોએન્ટેરાઇટિસ',
           symptoms: ['પેટમાં દુખાવો', 'ઉલટી અને ઘેન', 'ઝાડા'],
           precautions: ['સાફ પાણી પીવો', 'તાજું બનાવેલું ખાનું ખાવું', 'યોગ્ય સ્વચ્છતા જાળવો'],
-        },
       },
     },
+
+    patientHome: {
+      welcomeTo: 'స్వాగతం',
+      consultDescription: 'అర్హత కలిగిన వైద్యుల నుండి వైద్య సలహా పొందండి',
+      vitalsDescription: 'మీ ఆరోగ్య కొలతలను రికార్డు చేయండి',
+      hospitalNetwork: 'నభా సివిల్ హాస్పిటల్ నెట్‌వర్క్',
+      doctorsStaffed: 'వైద్యులు పనిలో',
+      servingVillages: 'సేవ చేస్తున్న',
+      availableEmergency: 'అత్యవసర పరిస్థితుల కోసం 24/7 అందుబాటులో',
+      connected: 'కనెక్ట్ అయ్యింది',
+      yourHealthSummary: 'మీ ఆరోగ్య సారాంశం',
+      consultations: 'సలహాలు',
+      vitalsRecorded: 'జీవన సంకేతాలు రికార్డు',
+      prescriptions: 'మందుల ప్రిస్క్రిప్షన్లు',
+      lastCheckup: 'చివరి చెకప్',
+      recentActivity: 'ఇటీవలి కార్యకలాపం',
+      viewAll: 'అన్నీ చూడండి',
+      communityHealthWorker: 'కమ్యూనిటీ హెల్త్ వర్కర్',
+      chwDescription: 'ఇంటికి వచ్చే సందర్శనలు మరియు సహాయం కోసం అందుబాటులో',
+      contactCHW: 'CHW ని సంప్రదించండి',
+      
+      activities: {
+        consultCompleted: 'వీడియో సలహా పూర్తయింది',
+        consultCompletedDesc: 'సాధారణ వైద్యం',
+        bloodPressureRecorded: 'రక్తపోటు రికార్డు చేయబడింది',
+        bloodPressureDesc: 'సాధారణ పరిధి',
+        prescriptionIssued: 'ఇ-ప్రిస్క్రిప్షన్ జారీ చేయబడింది',
+        prescriptionDesc: 'స్థానిక ఫార్మసీలో అందుబాటులో',
+        bloodGlucoseMeasured: 'రక్తంలో గ్లూకోజ్ కొలవబడింది',
+        bloodGlucoseDesc: 'సాధారణ ఉపవాస స్థాయి',
+        followupScheduled: 'ఫాలో-అప్ అపాయింట్మెంట్ షెడ్యూల్ చేయబడింది',
+        followupDesc: 'పిల్లల వైద్యం',
+        labResults: 'ల్యాబ్ టెస్ట్ ఫలితాలు అందుబాటులో',
+        labResultsDesc: 'అన్ని విలువలు సాధారణం',
+        temperatureRecorded: 'ఉష్ణోగ్రత రికార్డు చేయబడింది',
+        temperatureDesc: 'సాధారణ శరీర ఉష్ణోగ్రత',
+      },
+      
+      status: {
+        completed: 'పూర్తయింది',
+        normal: 'సాధారణం',
+        available: 'అందుబాటులో',
+        scheduled: 'షెడ్యూల్ చేయబడింది',
+      },
+      
+      timeAgo: {
+        hoursAgo: 'గంటల క్రితం',
+        dayAgo: 'రోజు క్రితం',
+        daysAgo: 'రోజుల క్రితం',
+        weekAgo: 'వారం క్రితం',
+      },
+    },
+  },
   },
   mr: {
     appName: 'नभा हेल्थ कनेक्ट',

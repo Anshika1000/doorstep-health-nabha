@@ -7,19 +7,19 @@ interface I18nProviderProps {
 
 export function I18nProvider({ children }: I18nProviderProps) {
   const [language, setLanguage] = useState<Language>(() => {
-    // Get from localStorage or default to English
+    // Get from localStorage or default to Punjabi
     const stored = localStorage.getItem('nabha-health-language');
-    if (stored && ['en', 'hi', 'pa'].includes(stored)) {
+    if (stored && ['en', 'hi', 'pa', 'bn', 'ta', 'te', 'gu', 'mr', 'ur'].includes(stored)) {
       return stored as Language;
     }
     
     // Try to detect from browser language
     const browserLang = navigator.language.slice(0, 2);
-    if (['hi', 'pa'].includes(browserLang)) {
+    if (['hi', 'pa', 'bn', 'ta', 'te', 'gu', 'mr', 'ur'].includes(browserLang)) {
       return browserLang as Language;
     }
     
-    return 'en';
+    return 'pa'; // Default to Punjabi as requested
   });
 
   useEffect(() => {
