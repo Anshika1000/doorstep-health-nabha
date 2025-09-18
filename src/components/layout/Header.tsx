@@ -3,7 +3,7 @@ import { Menu, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/enhanced-button';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { OfflineIndicator } from './OfflineIndicator';
-import { useI18n } from '@/lib/i18n';
+import { useI18n } from '@/components/providers/I18nProvider';
 
 interface HeaderProps {
   onMenuToggle?: () => void;

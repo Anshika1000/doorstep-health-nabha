@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/enhanced-button';
 import { Card } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
-import { useI18n } from '@/lib/i18n';
+import { useI18n } from '@/components/providers/I18nProvider';
 
 interface SymptomData {
   description: string;

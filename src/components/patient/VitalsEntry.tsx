@@ -3,7 +3,7 @@ import { Heart, Thermometer, Droplets, Zap, Weight } from 'lucide-react';
 import { Button } from '@/components/ui/enhanced-button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { useI18n } from '@/lib/i18n';
+import { useI18n } from '@/components/providers/I18nProvider';
 import { offlineManager, VitalRecord } from '@/lib/offline';
 import { useToast } from '@/hooks/use-toast';
 

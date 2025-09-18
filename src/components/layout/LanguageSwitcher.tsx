@@ -7,7 +7,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { useI18n, Language } from '@/lib/i18n';
+import { useI18n } from '@/components/providers/I18nProvider';
+import { Language } from '@/lib/i18n';
 
 const languages: { code: Language; name: string; nativeName: string }[] = [
   { code: 'en', name: 'English', nativeName: 'English' },

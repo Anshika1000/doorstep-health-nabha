@@ -3,7 +3,7 @@ import { AlertTriangle, Eye, Shield, ChevronDown, ChevronUp } from 'lucide-react
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { useI18n } from '@/lib/i18n';
+import { useI18n } from '@/components/providers/I18nProvider';
 
 export function HealthNoticeBoard() {
   const { t } = useI18n();

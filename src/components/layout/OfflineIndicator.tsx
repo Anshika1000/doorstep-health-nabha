@@ -3,7 +3,7 @@ import { Wifi, WifiOff, RotateCcw, CheckCircle, AlertCircle } from 'lucide-react
 import { Button } from '@/components/ui/enhanced-button';
 import { Badge } from '@/components/ui/badge';
 import { useOfflineStatus, useSyncStatus } from '@/lib/offline';
-import { useI18n } from '@/lib/i18n';
+import { useI18n } from '@/components/providers/I18nProvider';
 import { offlineManager } from '@/lib/offline';
 
 export function OfflineIndicator() {

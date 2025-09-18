@@ -1,5 +1,3 @@
-import React, { createContext, useContext } from 'react';
-
 export type Language = 'en' | 'hi' | 'pa' | 'bn' | 'ta' | 'te' | 'gu' | 'mr' | 'ur';
 
 export interface LocalizedStrings {
@@ -647,18 +645,4 @@ const translations: Record<Language, LocalizedStrings> = {
 
 export function getTranslations(language: Language): LocalizedStrings {
   return translations[language] || translations.en;
-}
-
-export const I18nContext = createContext<{
-  language: Language;
-  setLanguage: (lang: Language) => void;
-  t: LocalizedStrings;
-} | null>(null);
-
-export function useI18n() {
-  const context = useContext(I18nContext);
-  if (!context) {
-    throw new Error('useI18n must be used within an I18nProvider');
-  }
-  return context;
 }

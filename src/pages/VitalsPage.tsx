@@ -1,6 +1,6 @@
 import React from 'react';
 import { VitalsEntry } from '@/components/patient/VitalsEntry';
-import { useI18n } from '@/lib/i18n';
+import { useI18n } from '@/components/providers/I18nProvider';
 
 export function VitalsPage() {
   const { t } = useI18n();

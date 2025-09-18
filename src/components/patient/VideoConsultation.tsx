@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/enhanced-button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { useI18n } from '@/lib/i18n';
+import { useI18n } from '@/components/providers/I18nProvider';
 import drPriyaSharma from '@/assets/dr-priya-sharma.jpg';
 import drRajeshKumar from '@/assets/dr-rajesh-kumar.jpg';
 import drAnjaliPatel from '@/assets/dr-anjali-patel.jpg';

@@ -1,5 +1,20 @@
-import React, { createContext, useState, useEffect, ReactNode } from 'react';
-import { Language, getTranslations, LocalizedStrings, I18nContext } from '@/lib/i18n';
+import React, { createContext, useState, useEffect, ReactNode, useContext } from 'react';
+import { Language, getTranslations, LocalizedStrings } from '@/lib/i18n';
+
+// Create context here instead of in i18n.ts to avoid circular dependencies
+export const I18nContext = createContext<{
+  language: Language;
+  setLanguage: (lang: Language) => void;
+  t: LocalizedStrings;
+} | null>(null);
+
+export function useI18n() {
+  const context = useContext(I18nContext);
+  if (!context) {
+    throw new Error('useI18n must be used within an I18nProvider');
+  }
+  return context;
+}
 
 interface I18nProviderProps {
   children: ReactNode;

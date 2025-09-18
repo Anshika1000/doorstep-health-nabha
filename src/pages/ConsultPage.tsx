@@ -1,6 +1,6 @@
 import React from 'react';
 import { SymptomChecker } from '@/components/patient/SymptomChecker';
-import { useI18n } from '@/lib/i18n';
+import { useI18n } from '@/components/providers/I18nProvider';
 
 export function ConsultPage() {
   const { t } = useI18n();

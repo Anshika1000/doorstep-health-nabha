@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { VideoConsultation } from '@/components/patient/VideoConsultation';
 import { HealthNoticeBoard } from '@/components/patient/HealthNoticeBoard';
-import { useI18n } from '@/lib/i18n';
+import { useI18n } from '@/components/providers/I18nProvider';
 
 export function PatientHome() {
   const { t } = useI18n();
