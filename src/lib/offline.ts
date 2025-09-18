@@ -1,6 +1,5 @@
 // Offline-first architecture with sync queue and IndexedDB persistence
 
-import React, { useState, useEffect } from 'react';
 import { openDB, IDBPDatabase } from 'idb';
 
 export interface SyncQueueItem {
@@ -255,48 +254,3 @@ class OfflineManager {
 }
 
 export const offlineManager = new OfflineManager();
-
-// React hooks for offline functionality
-
-export function useOfflineStatus() {
-  const [isOnline, setIsOnline] = useState(navigator.onLine);
-
-  useEffect(() => {
-    const handleOnline = () => setIsOnline(true);
-    const handleOffline = () => setIsOnline(false);
-
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
-
-    return () => {
-      window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
-    };
-  }, []);
-
-  return isOnline;
-}
-
-export function useSyncStatus() {
-  const [syncStatus, setSyncStatus] = useState<'syncing' | 'synced' | 'failed' | 'idle'>('idle');
-  const [pendingCount, setPendingCount] = useState(0);
-
-  useEffect(() => {
-    const listener = (status: 'syncing' | 'synced' | 'failed') => {
-      setSyncStatus(status);
-    };
-
-    offlineManager.addSyncListener(listener);
-    
-    // Get initial pending count
-    offlineManager.getSyncQueue().then(queue => {
-      setPendingCount(queue.filter(item => item.status === 'pending').length);
-    });
-
-    return () => {
-      offlineManager.removeSyncListener(listener);
-    };
-  }, []);
-
-  return { syncStatus, pendingCount };
-}
